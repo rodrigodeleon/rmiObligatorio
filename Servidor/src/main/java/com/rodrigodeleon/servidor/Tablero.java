@@ -5,20 +5,51 @@
  */
 package com.rodrigodeleon.servidor;
 
+import java.util.List;
+
 /**
  *
  * @author Rodrigo
  */
 class Tablero {
 
+    private static Tablero instance;
     private Casillero start;
-
-    private void getStart() {
-        start = FactoryCasillero.getInstance().getCasilleros();
+    private List<Barrio> barrios;
+    private List<Mazo> mazos;
+    
+    private void crearTablero() 
+    {
+        FactoryCasillero.getInstance().getCasilleros(start,barrios);
     }
 
-    public Tablero() {
-
+    private Tablero() {
     }
+
+    
+    public static Tablero getInstance() {
+        
+        if(instance == null)
+        {
+            instance = new Tablero();
+            instance.crearTablero();
+        }
+
+        return instance;
+    }
+
+    public Casillero getStart() {
+        return start;
+    }
+
+    public List<Barrio> getBarrios() {
+        return barrios;
+    }
+
+    public List<Mazo> getMazos() {
+        return mazos;
+    }
+    
+    
 
 }

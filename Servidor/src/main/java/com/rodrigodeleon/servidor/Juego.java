@@ -21,6 +21,12 @@ public class Juego {
   
     
     public Juego() {
+        
+        tablero = Tablero.getInstance();
+        for(Barrio b : tablero.getBarrios())
+        {
+            System.out.println(b.getId());
+        }
     }
    
     public void setJugadorEnTurno(Jugador jugadorEnTurno) {

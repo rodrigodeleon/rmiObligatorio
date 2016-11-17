@@ -5,6 +5,7 @@
  */
 package com.rodrigodeleon.servidor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -47,6 +48,7 @@ public class Barrio {
     }
 
     public Barrio() {
+        listPropiedades = new ArrayList<>();
     }
     
     
