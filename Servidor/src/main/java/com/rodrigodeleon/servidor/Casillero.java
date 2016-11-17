@@ -9,7 +9,7 @@ package com.rodrigodeleon.servidor;
  *
  * @author Rodrigo
  */
-class Casillero {
+ class Casillero {
     
     private int id;
     private Casillero next;
@@ -32,11 +32,16 @@ class Casillero {
 
     public Casillero() {
     }
+    public Casillero(int id)
+    {
+        this.id = id;
+    }
 
     public Casillero(int id, Casillero next) {
         this.id = id;
         this.next = next;
     }
+    
    
     
     

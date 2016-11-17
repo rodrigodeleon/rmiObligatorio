@@ -41,10 +41,9 @@ public class Barrio {
         this.listPropiedades = listPropiedades;
     }
 
-    public Barrio(int id, int valorCasa, List<Terreno> listPropiedades) {
+    public Barrio(int id, int valorCasa) {
         this.id = id;
         this.valorCasa = valorCasa;
-        this.listPropiedades = listPropiedades;
     }
 
     public Barrio() {
