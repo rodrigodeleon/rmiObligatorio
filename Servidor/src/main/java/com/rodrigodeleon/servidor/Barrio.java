@@ -13,10 +13,10 @@ import java.util.List;
  * @author Rodrigo
  */
 public class Barrio {
-    
+
     private int id;
     private int valorCasa;
-    private List <Terreno>listPropiedades;
+    private List<Terreno> listPropiedades;
 
     public int getId() {
         return id;
@@ -45,13 +45,12 @@ public class Barrio {
     public Barrio(int id, int valorCasa) {
         this.id = id;
         this.valorCasa = valorCasa;
+        listPropiedades = new ArrayList<>();
+
     }
 
     public Barrio() {
         listPropiedades = new ArrayList<>();
     }
-    
-    
-    
-    
+
 }

@@ -12,23 +12,17 @@ import java.util.List;
  * @author Rodrigo
  */
 public class Juego {
-    
+
     private Jugador jugadorEnTurno;
     private List<Jugador> jugadores;
     private Tablero tablero;
 
-    
-  
-    
     public Juego() {
-        
+
         tablero = Tablero.getInstance();
-        for(Barrio b : tablero.getBarrios())
-        {
-            System.out.println(b.getId());
-        }
+        
     }
-   
+
     public void setJugadorEnTurno(Jugador jugadorEnTurno) {
         this.jugadorEnTurno = jugadorEnTurno;
     }
@@ -36,7 +30,6 @@ public class Juego {
     public Jugador getJugadorEnTurno() {
         return jugadorEnTurno;
     }
-    
 
     public List<Jugador> getJugadores() {
         return jugadores;
@@ -59,7 +52,5 @@ public class Juego {
         this.jugadores = jugadores;
         this.tablero = tablero;
     }
-   
-    
-    
+
 }

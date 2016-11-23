@@ -5,6 +5,7 @@
  */
 package com.rodrigodeleon.servidor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,7 +16,7 @@ class Tablero {
 
     private static Tablero instance;
     private Casillero start;
-    private List<Barrio> barrios;
+    private List<Barrio> barrios = new ArrayList<Barrio>();
     private List<Mazo> mazos;
     
     private void crearTablero() 
@@ -35,6 +36,7 @@ class Tablero {
             instance.crearTablero();
         }
 
+      
         return instance;
     }
 

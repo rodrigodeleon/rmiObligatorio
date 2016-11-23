@@ -48,33 +48,30 @@ public class FactoryCasillero {
                 anterior = start;
             }
             if (i >= 1 && i <= 5) {
-                Terreno t = new Terreno(1, barrioA, null, 220);
-                barrioA.getListPropiedades().add(t);
+                Terreno t = new Terreno(20, barrioA, null, 220, 1, null);
                 anterior.setNext(t);
+                barrioA.getListPropiedades().add(t);
+
                 anterior = t;
 
                 Especial e = new Especial(2, "Destino");
                 anterior.setNext(e);
                 anterior = e;
 
-                t.setId(3);
-                t.setAlquiler(220);
-                barrioA.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t1 = new Terreno(30, barrioA, null, 220, 3, null);
+                barrioA.getListPropiedades().add(t1);
+                anterior.setNext(t1);
+                anterior = t1;
 
-                t.setId(4);
-                t.setAlquiler(240);
-                barrioA.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t2 = new Terreno(44, barrioA, null, 240, 4, null);
+                barrioA.getListPropiedades().add(t2);
+                anterior.setNext(t2);
+                anterior = t2;
 
-                t.setId(5);
-                t.setAlquiler(200);
-                t.setBarrio(ferrocarriles);
-                ferrocarriles.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t3 = new Terreno(45, ferrocarriles, null, 200, 5, null);
+                ferrocarriles.getListPropiedades().add(t3);
+                anterior.setNext(t3);
+                anterior = t3;
 
                 barrios.add(barrioA);
 
@@ -82,30 +79,25 @@ public class FactoryCasillero {
 
             }
             if (i >= 6 && i <= 10) {
-                Terreno t = new Terreno(6, barrioB, null, 260);
+                Terreno t = new Terreno(62, barrioB, null, 260, 6, null);
                 barrioB.getListPropiedades().add(t);
                 anterior.setNext(t);
                 anterior = t;
 
-                t.setId(7);
-                t.setAlquiler(260);
-                barrioB.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t1 = new Terreno(52, barrioB, null, 260, 7, null);
+                barrioB.getListPropiedades().add(t1);
+                anterior.setNext(t1);
+                anterior = t1;
 
-                t.setId(8);
-                t.setAlquiler(150);
-                t.setBarrio(servicios);
-                servicios.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t2 = new Terreno(62, servicios, null, 150, 8, null);
+                servicios.getListPropiedades().add(t2);
+                anterior.setNext(t2);
+                anterior = t2;
 
-                t.setId(9);
-                t.setAlquiler(280);
-                t.setBarrio(barrioB);
-                barrioB.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t3 = new Terreno(65, barrioB, null, 280, 9, null);
+                barrioB.getListPropiedades().add(t3);
+                anterior.setNext(t3);
+                anterior = t3;
 
                 Especial e = new Especial(10, "Carcel");
                 anterior.setNext(e);
@@ -116,33 +108,29 @@ public class FactoryCasillero {
             }
 
             if (i >= 11 && i <= 15) {
-                Terreno t = new Terreno(11, barrioC, null, 300);
+                Terreno t = new Terreno(87, barrioC, null, 300, 11, null);
                 barrioC.getListPropiedades().add(t);
                 anterior.setNext(t);
                 anterior = t;
 
-                t.setId(12);
-                t.setAlquiler(300);
-                barrioC.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t1 = new Terreno(76, barrioC, null, 300, 12, null);
+                barrioC.getListPropiedades().add(t1);
+                anterior.setNext(t1);
+                anterior = t1;
 
                 Especial e = new Especial(13, "Community");
                 anterior.setNext(e);
                 anterior = e;
 
-                t.setId(14);
-                t.setAlquiler(320);
-                barrioC.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t2 = new Terreno(66, barrioC, null, 320, 14, null);
+                barrioC.getListPropiedades().add(t2);
+                anterior.setNext(t2);
+                anterior = t2;
 
-                t.setId(15);
-                t.setAlquiler(200);
-                t.setBarrio(ferrocarriles);
-                ferrocarriles.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t3 = new Terreno(66, ferrocarriles, null, 200, 15, null);
+                ferrocarriles.getListPropiedades().add(t3);
+                anterior.setNext(t3);
+                anterior = t3;
 
                 barrios.add(barrioC);
 
@@ -154,26 +142,23 @@ public class FactoryCasillero {
                 anterior.setNext(e);
                 anterior = e;
 
-                Terreno t = new Terreno(17, barrioD, null, 350);
+                Terreno t = new Terreno(75, barrioD, null, 350, 17, null);
                 barrioD.getListPropiedades().add(t);
                 anterior.setNext(t);
                 anterior = t;
 
-                e.setId(18);
-                e.setTipo("Luxury Tax");
-                anterior.setNext(e);
-                anterior = e;
+                Especial e1 = new Especial(18, "Luxury Tax");
+                anterior.setNext(e1);
+                anterior = e1;
 
-                t.setId(19);
-                t.setAlquiler(400);
-                barrioD.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t1 = new Terreno(70, barrioD, null, 400, 19, null);
+                barrioD.getListPropiedades().add(t1);
+                anterior.setNext(t1);
+                anterior = t1;
 
-                e.setId(20);
-                e.setTipo("Go");
-                anterior.setNext(e);
-                anterior = e;
+                Especial e2 = new Especial(20, "Go");
+                anterior.setNext(e2);
+                anterior = e2;
 
                 barrios.add(barrioD);
 
@@ -181,7 +166,7 @@ public class FactoryCasillero {
             }
 
             if (i >= 21 && i <= 25) {
-                Terreno t = new Terreno(1, barrioE, null, 60);
+                Terreno t = new Terreno(11, barrioE, null, 60, 21, null);
                 barrioE.getListPropiedades().add(t);
                 anterior.setNext(t);
                 anterior = t;
@@ -190,23 +175,19 @@ public class FactoryCasillero {
                 anterior.setNext(e);
                 anterior = e;
 
-                t.setId(23);
-                t.setAlquiler(60);
-                barrioE.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t1 = new Terreno(12, barrioE, null, 60, 23, null);
+                barrioE.getListPropiedades().add(t1);
+                anterior.setNext(t1);
+                anterior = t1;
 
-                e.setId(24);
-                e.setTipo("Income Tax");
-                anterior.setNext(e);
-                anterior = e;
+                Especial e1 = new Especial(24, "Income Tax");
+                anterior.setNext(e1);
+                anterior = e1;
 
-                t.setId(25);
-                t.setAlquiler(200);
-                t.setBarrio(ferrocarriles);
-                ferrocarriles.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t3 = new Terreno(45, ferrocarriles, null, 200, 25, null);
+                ferrocarriles.getListPropiedades().add(t3);
+                anterior.setNext(t3);
+                anterior = t3;
 
                 barrios.add(barrioE);
 
@@ -214,7 +195,7 @@ public class FactoryCasillero {
 
             }
             if (i >= 26 && i <= 30) {
-                Terreno t = new Terreno(26, barrioF, null, 100);
+                Terreno t = new Terreno(45, barrioF, null, 100, 26, null);
                 barrioF.getListPropiedades().add(t);
                 anterior.setNext(t);
                 anterior = t;
@@ -223,22 +204,19 @@ public class FactoryCasillero {
                 anterior.setNext(e);
                 anterior = e;
 
-                t.setId(28);
-                t.setAlquiler(100);
-                barrioF.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t1 = new Terreno(46, barrioF, null, 100, 28, null);
+                barrioF.getListPropiedades().add(t1);
+                anterior.setNext(t1);
+                anterior = t1;
 
-                t.setId(29);
-                t.setAlquiler(120);
-                barrioF.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t2 = new Terreno(46, barrioF, null, 120, 29, null);
+                barrioF.getListPropiedades().add(t2);
+                anterior.setNext(t2);
+                anterior = t2;
 
-                e.setId(30);
-                e.setTipo("Carcel Visita");
-                anterior.setNext(e);
-                anterior = t;
+                Especial e1 = new Especial(30, "Carcel Visita");
+                anterior.setNext(e1);
+                anterior = e1;
 
                 barrios.add(barrioF);
 
@@ -247,37 +225,30 @@ public class FactoryCasillero {
             }
 
             if (i >= 31 && i <= 35) {
-                Terreno t = new Terreno(31, barrioG, null, 140);
+                Terreno t = new Terreno(31, barrioG, null, 140, 31, null);
                 barrioG.getListPropiedades().add(t);
                 anterior.setNext(t);
                 anterior = t;
 
-                t.setId(32);
-                t.setAlquiler(140);
-                t.setBarrio(servicios);
-                servicios.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t1 = new Terreno(31, servicios, null, 150, 32, null);
+                servicios.getListPropiedades().add(t1);
+                anterior.setNext(t1);
+                anterior = t1;
 
-                t.setId(33);
-                t.setAlquiler(150);
-                t.setBarrio(barrioG);
-                barrioG.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t2 = new Terreno(31, barrioG, null, 140, 33, null);
+                barrioG.getListPropiedades().add(t2);
+                anterior.setNext(t2);
+                anterior = t2;
 
-                t.setId(34);
-                t.setAlquiler(160);
-                barrioG.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t3 = new Terreno(31, barrioG, null, 160, 34, null);
+                barrioG.getListPropiedades().add(t3);
+                anterior.setNext(t3);
+                anterior = t3;
 
-                t.setId(35);
-                t.setAlquiler(200);
-                t.setBarrio(ferrocarriles);
-                ferrocarriles.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t4 = new Terreno(31, ferrocarriles, null, 200, 35, null);
+                ferrocarriles.getListPropiedades().add(t4);
+                anterior.setNext(t4);
+                anterior = t4;
 
                 barrios.add(barrioG);
 
@@ -287,7 +258,7 @@ public class FactoryCasillero {
 
             if (i >= 36 && i <= 40) {
 
-                Terreno t = new Terreno(36, barrioH, null, 140);
+                Terreno t = new Terreno(36, barrioH, null, 140, 36,null);
                 barrioH.getListPropiedades().add(t);
                 anterior.setNext(t);
                 anterior = t;
@@ -296,17 +267,17 @@ public class FactoryCasillero {
                 anterior.setNext(e);
                 anterior = e;
 
-                t.setId(38);
-                t.setAlquiler(150);
-                barrioH.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+                Terreno t1 = new Terreno(38, barrioH, null, 150, 38,null);
+                barrioH.getListPropiedades().add(t1);
+                anterior.setNext(t1);
+                anterior = t1;
+                
+               Terreno t2 = new Terreno(36, barrioH, null, 160, 39, null);
+                barrioH.getListPropiedades().add(t2);
+                anterior.setNext(t2);
+                anterior = t2;
 
-                t.setId(39);
-                t.setAlquiler(160);
-                barrioH.getListPropiedades().add(t);
-                anterior.setNext(t);
-                anterior = t;
+               
 
                 anterior.setNext(start);
                 barrios.add(barrioH);
@@ -315,9 +286,20 @@ public class FactoryCasillero {
 
             }
         }
-        
+
         barrios.add(ferrocarriles);
         barrios.add(servicios);
+
+        for (Barrio b : barrios) {
+            System.out.println("inicio barrio");
+
+            for (Terreno t : b.getListPropiedades()) {
+                System.out.println(t.getId());
+
+            }
+
+            System.out.println("fin barrio");
+        }
 
     }
 
