@@ -15,13 +15,14 @@ import java.util.List;
 class Tablero {
 
     private static Tablero instance;
-    private Casillero start;
+    private static Casillero start = new Casillero();
     private List<Barrio> barrios = new ArrayList<Barrio>();
     private List<Mazo> mazos;
     
     private void crearTablero() 
     {
-        FactoryCasillero.getInstance().getCasilleros(start,barrios);
+        
+        FactoryCasillero.getInstance().getCasilleros(barrios);
     }
 
     private Tablero() {
@@ -40,7 +41,7 @@ class Tablero {
         return instance;
     }
 
-    public Casillero getStart() {
+    public static Casillero getStart() {
         return start;
     }
 
@@ -50,6 +51,23 @@ class Tablero {
 
     public List<Mazo> getMazos() {
         return mazos;
+    }
+
+    public static void setStart(Casillero start) {
+        Tablero.start = start;
+    }
+    
+    public void listarTablero()
+    {
+        Casillero aux = Tablero.getStart();
+        while(aux.getId()!=39)
+        {
+            System.out.println(aux.getId());
+            aux = aux.getNext();
+            
+        }
+        System.out.println(aux.getId());
+        System.out.println(aux.getNext().getId());
     }
     
     

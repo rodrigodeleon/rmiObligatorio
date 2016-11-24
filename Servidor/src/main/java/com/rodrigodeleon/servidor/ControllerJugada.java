@@ -9,16 +9,8 @@ package com.rodrigodeleon.servidor;
  *
  * @author Rodrigo
  */
-public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        Juego a = new Juego();
-        a.getTablero().listarTablero();
+public class ControllerJugada {
         
-    }
+    
     
 }

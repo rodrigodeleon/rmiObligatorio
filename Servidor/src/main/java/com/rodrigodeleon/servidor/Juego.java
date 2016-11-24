@@ -40,6 +40,8 @@ public class Juego {
     }
 
     public Tablero getTablero() {
+        
+        
         return tablero;
     }
 
