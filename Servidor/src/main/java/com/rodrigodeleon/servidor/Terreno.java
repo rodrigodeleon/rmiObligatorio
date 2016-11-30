@@ -14,24 +14,24 @@ class Terreno extends Casillero {
     private int casas;
     private Barrio barrio;
     private Jugador jugador;
-    private int alquiler;
+    private int costo;
 
     public Terreno() {
     }
 
-    public Terreno(int casas, Barrio barrio, Jugador jugador, int alquiler) {
+    public Terreno(int casas, Barrio barrio, Jugador jugador, int costo) {
         this.casas = casas;
         this.barrio = barrio;
         this.jugador = jugador;
-        this.alquiler = alquiler;
+        this.costo = costo;
     }
 
-    public Terreno(int casas, Barrio barrio, Jugador jugador, int alquiler, int id, Casillero next) {
+    public Terreno(int casas, Barrio barrio, Jugador jugador, int costo, int id, Casillero next) {
         super(id, next);
         this.casas = casas;
         this.barrio = barrio;
         this.jugador = jugador;
-        this.alquiler = alquiler;
+        this.costo = costo;
     }
 
     public int getCasas() {
@@ -58,12 +58,18 @@ class Terreno extends Casillero {
         this.jugador = jugador;
     }
 
-    public int getAlquiler() {
-        return alquiler;
+    public int getCosto() {
+        return costo;
     }
 
-    public void setAlquiler(int alquiler) {
-        this.alquiler = alquiler;
+    public void setCosto(int costo) {
+        this.costo = costo;
+    }
+    
+    public int getAlquiler()
+    
+    {
+        return (costo * casas) / 20;
     }
     
     

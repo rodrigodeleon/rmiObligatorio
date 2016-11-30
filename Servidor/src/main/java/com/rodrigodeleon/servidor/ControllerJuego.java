@@ -9,9 +9,9 @@ package com.rodrigodeleon.servidor;
  *
  * @author Rodrigo
  */
-public class ControllerJugada {
-
+public class ControllerJuego {
     
+    //llega accion, ejecutarla
     
-
+    //devolver jugada
 }

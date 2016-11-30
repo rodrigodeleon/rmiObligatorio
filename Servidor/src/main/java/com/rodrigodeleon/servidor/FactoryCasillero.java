@@ -261,7 +261,7 @@ public class FactoryCasillero {
                 anterior.setNext(t1);
                 anterior = t1;
                 
-               Terreno t2 = new Terreno(36, barrioH, null, 160, 39, null);
+                Terreno t2 = new Terreno(36, barrioH, null, 160, 39, null);
                 barrioH.getListPropiedades().add(t2);
                 anterior.setNext(t2);
                 anterior = t2;

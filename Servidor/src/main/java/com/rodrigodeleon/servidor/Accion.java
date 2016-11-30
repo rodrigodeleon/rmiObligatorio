@@ -29,7 +29,40 @@ public class Accion {
     {
         if (tipo.equals("comprar"))
         {
-            //llamar a metodo del controller que llame a metodo del tablero que lo modifique
+            
+           ControllerAccion.getinstance().comprar();
+
+            
+        }
+        
+        if (tipo.equals("construir"))
+        {
+            
+           ControllerAccion.getinstance().construir();
+
+            
+        }
+        
+        if (tipo.equals("alquilar"))
+        {
+            
+           ControllerAccion.getinstance().alquilar();
+
+            
+        }
+        
+        if (tipo.equals("vender"))
+        {
+            
+           ControllerAccion.getinstance().vender();
+
+            
+        }
+        if (tipo.equals("tirarDado"))
+        {
+            
+           ControllerAccion.getinstance().tirarDado();
+
             
         }
     }

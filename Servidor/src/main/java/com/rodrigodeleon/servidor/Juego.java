@@ -13,14 +13,25 @@ import java.util.List;
  */
 public class Juego {
 
+    private static Juego instancia;
     private Jugador jugadorEnTurno;
     private List<Jugador> jugadores;
     private Tablero tablero;
 
-    public Juego() {
+    private Juego() {
 
         tablero = Tablero.getInstance();
         
+    }
+    
+    public static Juego getInstance()
+    {
+        if(instancia ==null)
+        {
+            instancia = new Juego();
+            
+        }
+        return instancia;
     }
 
     public void setJugadorEnTurno(Jugador jugadorEnTurno) {
