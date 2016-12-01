@@ -24,7 +24,7 @@ public class ControllerAccion {
         return instancia;
     }
 
-    public void comprar() {
+    public Jugada comprar(Accion miAccion) {
 
         try {
 
@@ -40,12 +40,16 @@ public class ControllerAccion {
             e.printStackTrace();
         }
 
+        return ControllerJugada.construirJugada(miAccion);
+
     }
 
-    public void vender() {
+    public Jugada vender(Accion miAccion) {
+        return ControllerJugada.construirJugada(miAccion);
+
     }
 
-    public void alquilar() {
+    public Jugada pagarAlquiler(Accion miAccion) {
 
         try {
 
@@ -59,13 +63,35 @@ public class ControllerAccion {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public void tirarDado() {
+        return ControllerJugada.construirJugada(miAccion);
 
     }
 
-    public void construir() {
+    public Jugada tirarDado(Accion miAccion) {
+
+        try {
+
+            Jugador miJugador = Juego.getInstance().getJugadorEnTurno();
+
+            if (miJugador.getPosicion() instanceof Terreno) {
+                if (((Terreno) miJugador.getPosicion()).getJugador() != miJugador) {
+                    if (((Terreno) miJugador.getPosicion()).getJugador() != null) {
+                        miAccion.setTipo("pagarAlquiler");
+                        miAccion.ejecutar();
+
+                    }
+
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return ControllerJugada.construirJugada(miAccion);
+
+    }
+
+    public Jugada construir(Accion miAccion) {
 
         try {
 
@@ -81,6 +107,8 @@ public class ControllerAccion {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        return ControllerJugada.construirJugada(miAccion);
 
     }
 

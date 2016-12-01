@@ -27,7 +27,7 @@ class Terreno extends Casillero {
     }
 
     public Terreno(int casas, Barrio barrio, Jugador jugador, int costo, int id, Casillero next) {
-        super(id, next);
+        super(id, next, TERRENO );
         this.casas = casas;
         this.barrio = barrio;
         this.jugador = jugador;

@@ -23,14 +23,19 @@ public class Accion {
 
     public Accion() {
     }
+
+    public Accion(String tipo) {
+        this.tipo = tipo;
+    }
     
     
-    public void ejecutar()
+    
+    public Jugada ejecutar()
     {
         if (tipo.equals("comprar"))
         {
             
-           ControllerAccion.getinstance().comprar();
+           return ControllerAccion.getinstance().comprar(this);
 
             
         }
@@ -38,15 +43,15 @@ public class Accion {
         if (tipo.equals("construir"))
         {
             
-           ControllerAccion.getinstance().construir();
+           return ControllerAccion.getinstance().construir(this);
 
             
         }
         
-        if (tipo.equals("alquilar"))
+        if (tipo.equals("pagarAlquiler"))
         {
             
-           ControllerAccion.getinstance().alquilar();
+           return ControllerAccion.getinstance().pagarAlquiler(this);
 
             
         }
@@ -54,17 +59,19 @@ public class Accion {
         if (tipo.equals("vender"))
         {
             
-           ControllerAccion.getinstance().vender();
+           return ControllerAccion.getinstance().vender(this);
 
             
         }
         if (tipo.equals("tirarDado"))
         {
             
-           ControllerAccion.getinstance().tirarDado();
+           return ControllerAccion.getinstance().tirarDado(this);
 
             
         }
+        
+        return null;
     }
     
 }

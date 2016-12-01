@@ -25,7 +25,7 @@ public class Especial extends Casillero {
     }
 
     public Especial(String tipo, int id, Casillero next) {
-        super(id, next);
+        super(id, next, ESPECIAL);
         this.tipo = tipo;
     }
     
