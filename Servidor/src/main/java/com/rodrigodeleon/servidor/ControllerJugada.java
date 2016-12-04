@@ -46,31 +46,31 @@ public class ControllerJugada {
         }
         else if(accionRealizada.getTipo().equals("comprar"))
         {
-           // miJugada.setSiguienteJugador();  buscar como conseguir el siguiente jugador
+            miJugada.setSiguienteJugador(Juego.getInstance().getSiguienteJugador(miJugada.getJugadorAnterior()));  
             miJugada.setAccionesDisponibles(accionesPrimerTurno());
         }
         
         else if(accionRealizada.getTipo().equals("pagarAlquiler"))
         {
-           // miJugada.setSiguienteJugador();  buscar como conseguir el siguiente jugador
+            miJugada.setSiguienteJugador(Juego.getInstance().getSiguienteJugador(miJugada.getJugadorAnterior()));  
             miJugada.setAccionesDisponibles(accionesPrimerTurno());
         }
         
         else if(accionRealizada.getTipo().equals("construir"))
         {
-           // miJugada.setSiguienteJugador();  buscar como conseguir el siguiente jugador
+            miJugada.setSiguienteJugador(Juego.getInstance().getSiguienteJugador(miJugada.getJugadorAnterior()));  
             miJugada.setAccionesDisponibles(accionesPrimerTurno());
         }
         
          else if(accionRealizada.getTipo().equals("vender"))
         {
-           // miJugada.setSiguienteJugador();  buscar como conseguir el siguiente jugador
+            miJugada.setSiguienteJugador(Juego.getInstance().getSiguienteJugador(miJugada.getJugadorAnterior()));  
             miJugada.setAccionesDisponibles(accionesPrimerTurno());
         }
         
          else if(accionRealizada.getTipo().equals("sacarCartaEspecial"))
         {
-           // miJugada.setSiguienteJugador();  buscar como conseguir el siguiente jugador
+            miJugada.setSiguienteJugador(Juego.getInstance().getSiguienteJugador(miJugada.getJugadorAnterior()));  
             miJugada.setAccionesDisponibles(accionesPrimerTurno());
         }
         

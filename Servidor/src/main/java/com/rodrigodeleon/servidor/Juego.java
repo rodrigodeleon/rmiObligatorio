@@ -15,23 +15,33 @@ public class Juego {
 
     private static Juego instancia;
     private Jugador jugadorEnTurno;
-    private List<Jugador> jugadores;
+    private static List<Jugador> jugadores;
     private Tablero tablero;
 
     private Juego() {
 
         tablero = Tablero.getInstance();
-        
+
     }
-    
-    public static Juego getInstance()
-    {
-        if(instancia ==null)
-        {
+
+    public static Juego getInstance() {
+        if (instancia == null) {
             instancia = new Juego();
-            
+
         }
         return instancia;
+    }
+
+    public Jugador getSiguienteJugador(Jugador miJugador) {
+
+        for (int i = 0; i < jugadores.size() - 1; i++) {
+            if (jugadores.get(i).equals(miJugador))
+            {
+                return jugadores.get(i+1);
+            }
+        }
+        return jugadores.get(0);
+        
     }
 
     public void setJugadorEnTurno(Jugador jugadorEnTurno) {
@@ -42,7 +52,7 @@ public class Juego {
         return jugadorEnTurno;
     }
 
-    public List<Jugador> getJugadores() {
+    public static List<Jugador> getJugadores() {
         return jugadores;
     }
 
@@ -51,8 +61,7 @@ public class Juego {
     }
 
     public Tablero getTablero() {
-        
-        
+
         return tablero;
     }
 
