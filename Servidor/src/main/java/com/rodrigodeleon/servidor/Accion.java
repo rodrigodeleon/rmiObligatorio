@@ -70,6 +70,13 @@ public class Accion {
 
             
         }
+         if (tipo.equals("sacarCartaEspecial"))
+        {
+            
+           return ControllerAccion.getinstance().tirarDado(this);
+
+            
+        }
         
         return null;
     }

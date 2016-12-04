@@ -58,6 +58,8 @@ public class ControllerAccion {
             if (miJugador.getDinero() - miTerreno.getAlquiler() >= 0) {
 
                 miJugador.setDinero(miJugador.getDinero() - miTerreno.getAlquiler());
+                miTerreno.getJugador().setDinero(miTerreno.getJugador().getDinero()+ miTerreno.getAlquiler());
+                    
             }
 
         } catch (Exception e) {
@@ -80,6 +82,7 @@ public class ControllerAccion {
                         miAccion.ejecutar();
 
                     }
+                    
 
                 }
             }

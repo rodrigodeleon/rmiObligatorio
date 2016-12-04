@@ -11,7 +11,10 @@ package com.rodrigodeleon.servidor;
  */
 public class ControllerJuego {
     
-    //llega accion, ejecutarla
-    
-    //devolver jugada
+    public Jugada ejecutarAccion(Accion miAccion)
+    {
+        return miAccion.ejecutar();
+        
+    }
 }
+

@@ -42,18 +42,42 @@ public class ControllerJugada {
                 Juego.getInstance().getJugadorEnTurno().getPosicion().getTipoCasillero() == Casillero.TERRENO )
         {
             miJugada.setAccionesDisponibles(accionesSobreTerreno());
+            miJugada.setSiguienteJugador(miJugada.getJugadorAnterior());
+        }
+        else if(accionRealizada.getTipo().equals("comprar"))
+        {
+           // miJugada.setSiguienteJugador();  buscar como conseguir el siguiente jugador
+            miJugada.setAccionesDisponibles(accionesPrimerTurno());
         }
         
+        else if(accionRealizada.getTipo().equals("pagarAlquiler"))
+        {
+           // miJugada.setSiguienteJugador();  buscar como conseguir el siguiente jugador
+            miJugada.setAccionesDisponibles(accionesPrimerTurno());
+        }
         
+        else if(accionRealizada.getTipo().equals("construir"))
+        {
+           // miJugada.setSiguienteJugador();  buscar como conseguir el siguiente jugador
+            miJugada.setAccionesDisponibles(accionesPrimerTurno());
+        }
+        
+         else if(accionRealizada.getTipo().equals("vender"))
+        {
+           // miJugada.setSiguienteJugador();  buscar como conseguir el siguiente jugador
+            miJugada.setAccionesDisponibles(accionesPrimerTurno());
+        }
+        
+         else if(accionRealizada.getTipo().equals("sacarCartaEspecial"))
+        {
+           // miJugada.setSiguienteJugador();  buscar como conseguir el siguiente jugador
+            miJugada.setAccionesDisponibles(accionesPrimerTurno());
+        }
         
         return miJugada;
     }
     
-    public Jugada ejecutarAccion(Accion miAccion)
-    {
-        return miAccion.ejecutar();
-        
-    }
+   
     
     private static List<Accion> accionesSobreTerreno()
     {
@@ -61,6 +85,14 @@ public class ControllerJugada {
         
         retorno.add(new Accion("Comprar"));
         retorno.add(new Accion("Pasar"));
+        return retorno;
+    }
+    
+    private static List<Accion> accionesPrimerTurno()
+    {
+        List<Accion> retorno = new ArrayList<Accion>();
+        
+        retorno.add(new Accion("tirarDado"));
         return retorno;
     }
 
