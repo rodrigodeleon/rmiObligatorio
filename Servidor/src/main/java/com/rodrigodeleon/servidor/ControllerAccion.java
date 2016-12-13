@@ -5,11 +5,13 @@
  */
 package com.rodrigodeleon.servidor;
 
+import com.rodrigodeleon.common.IControllerAccion;
+
 /**
  *
  * @author Rodrigo
  */
-public class ControllerAccion {
+public class ControllerAccion implements IControllerAccion {
 
     private static ControllerAccion instancia;
 

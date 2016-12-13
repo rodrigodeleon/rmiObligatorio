@@ -5,11 +5,24 @@
  */
 package com.rodrigodeleon.servidor;
 
+import com.rodrigodeleon.common.IControllerJuego;
+
 /**
  *
  * @author Rodrigo
  */
-public class ControllerJuego {
+public class ControllerJuego implements IControllerJuego{
+    
+    
+    private static ControllerJuego instancia;
+    private ControllerJuego(){}
+    public static ControllerJuego getInstance()
+    {
+        if(instancia == null)
+            instancia = new ControllerJuego();
+        
+        return instancia;
+    }
     
     public Jugada ejecutarAccion(Accion miAccion)
     {

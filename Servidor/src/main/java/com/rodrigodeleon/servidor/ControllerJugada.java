@@ -5,6 +5,7 @@
  */
 package com.rodrigodeleon.servidor;
 
+import com.rodrigodeleon.common.IControllerJugada;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
  *
  * @author Rodrigo
  */
-public class ControllerJugada {
+public class ControllerJugada implements IControllerJugada{
 
     
     private static ControllerJugada instancia;
