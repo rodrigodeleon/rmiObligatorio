@@ -17,6 +17,7 @@ public class ControllerJuego implements IControllerJuego{
     
     
     private static ControllerJuego instancia;
+    private Juego juego = Juego.getInstance();
     private ControllerJuego(){}
     public static ControllerJuego getInstance()
     {
@@ -41,6 +42,11 @@ public class ControllerJuego implements IControllerJuego{
     public void agregarObserver(Jugador a )
     {
         Juego.getJugadores().add(a);
+    }
+    
+    public Juego getJuego()
+    {
+        return juego;
     }
 }
 

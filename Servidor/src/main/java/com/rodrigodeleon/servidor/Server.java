@@ -20,19 +20,16 @@ import java.util.List;
  */
 public class Server implements IServer {
 
-    private List<Jugador> jugadores;
-    private ControllerJuego controllerJuego;
-
+    
     @SuppressWarnings("deprecation")
     public Server() throws RemoteException {
         System.setProperty("java.security.policy", "file://Users/Rodrigo/NetBeansProjects/dda/rmiObligatorio/java.policy");
 
         if (System.getSecurityManager() == null) {
-            System.setSecurityManager(new RMISecurityManager());
+            System.setSecurityManager(new SecurityManager());
         }
 
-        this.jugadores = new ArrayList<Jugador>();
-        controllerJuego = ControllerJuego.getInstance();
+        
     }
 
     public String sayHello() throws RemoteException {
@@ -40,7 +37,7 @@ public class Server implements IServer {
     }
 
     public void addObserver(Jugador jugador) throws RemoteException {
-        this.jugadores.add(jugador);
+        Juego.getJugadores().add(jugador);
     }
 
     public IControllerAccion getControllerAccion() throws RemoteException {
