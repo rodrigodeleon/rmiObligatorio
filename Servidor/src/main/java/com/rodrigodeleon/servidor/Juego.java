@@ -5,6 +5,7 @@
  */
 package com.rodrigodeleon.servidor;
 
+import com.rodrigodeleon.common.IControllerJuego;
 import java.util.List;
 
 /**

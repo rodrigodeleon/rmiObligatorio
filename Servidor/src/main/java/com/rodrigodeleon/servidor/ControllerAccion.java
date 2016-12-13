@@ -5,6 +5,8 @@
  */
 package com.rodrigodeleon.servidor;
 
+import com.rodrigodeleon.common.Accion;
+import com.rodrigodeleon.common.Jugada;
 import com.rodrigodeleon.common.IControllerAccion;
 
 /**

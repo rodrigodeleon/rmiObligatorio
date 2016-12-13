@@ -5,13 +5,14 @@
  */
 package com.rodrigodeleon.servidor;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  *
  * @author Rodrigo
  */
-public class Jugador extends Persona{
+public class Jugador extends Persona implements Serializable{
     
     private int dinero;
     private Casillero posicion;

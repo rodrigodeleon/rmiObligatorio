@@ -13,4 +13,5 @@ import java.rmi.Remote;
  */
 public interface IControllerJugada extends Remote{
     
+            
 }

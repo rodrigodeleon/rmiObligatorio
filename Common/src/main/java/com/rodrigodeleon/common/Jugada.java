@@ -3,15 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.rodrigodeleon.servidor;
+package com.rodrigodeleon.common;
 
+import com.rodrigodeleon.servidor.Jugador;
+import com.rodrigodeleon.servidor.*;
+import java.io.Serializable;
 import java.util.List;
 
 /**
  *
  * @author Rodrigo
  */
-public class Jugada {
+public class Jugada implements Serializable{
     
     private Accion accionRealizada;
     private Jugador jugadorAnterior;

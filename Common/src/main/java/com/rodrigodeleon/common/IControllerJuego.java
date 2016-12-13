@@ -6,11 +6,17 @@
 package com.rodrigodeleon.common;
 
 import java.rmi.Remote;
+import java.rmi.RemoteException;
 
 /**
  *
  * @author Rodrigo
  */
 public interface IControllerJuego extends Remote {
+    
+       public void start() throws RemoteException;
+    
+       public Jugada ejecutarAccion(Accion miAccion);
+
     
 }

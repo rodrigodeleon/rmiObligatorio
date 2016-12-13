@@ -5,6 +5,8 @@
  */
 package com.rodrigodeleon.servidor;
 
+import com.rodrigodeleon.common.Accion;
+import com.rodrigodeleon.common.Jugada;
 import com.rodrigodeleon.common.IControllerJuego;
 
 /**
@@ -24,10 +26,21 @@ public class ControllerJuego implements IControllerJuego{
         return instancia;
     }
     
-    public Jugada ejecutarAccion(Accion miAccion)
+    public void start()
     {
-        return miAccion.ejecutar();
+        Juego.getInstance();
+    }
+    
+    public Jugada ejecutarAccion(Accion a)
+    {
         
+        return a.ejecutar();
+        
+    }
+    
+    public void agregarObserver(Jugador a )
+    {
+        Juego.getJugadores().add(a);
     }
 }
 

@@ -14,7 +14,7 @@ import java.rmi.RemoteException;
  */
 public interface IServer extends Remote {
     
-    public String sayHello() throws RemoteException;
+        public String sayHello() throws RemoteException;
 
         public IControllerJuego getControllerJuego() throws RemoteException;
 	

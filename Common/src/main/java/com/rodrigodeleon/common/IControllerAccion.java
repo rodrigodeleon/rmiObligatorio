@@ -12,5 +12,6 @@ import java.rmi.Remote;
  * @author Rodrigo
  */
 public interface IControllerAccion extends Remote{
+
     
 }
